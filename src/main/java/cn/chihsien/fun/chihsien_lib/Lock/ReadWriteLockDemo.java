@@ -31,7 +31,7 @@ class MyCaChe {
                 e.printStackTrace();
             }
             map.put(key, value);
-            System.out.println(Thread.currentThread().getName() + "\t正在完成");
+            System.out.println(Thread.currentThread().getName() + "\t正在完成"+key);
         } finally {
             reentrantReadWriteLock.writeLock().unlock();
         }
