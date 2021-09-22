@@ -16,8 +16,7 @@ class MyCaChe {
     private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
 
     /**
-     * 写
-     *
+     * 写 原子+独占 不可中断 保证完整一致性不可分割
      * @param key
      * @param value
      */
@@ -39,8 +38,7 @@ class MyCaChe {
     }
 
     /**
-     * 读
-     *
+     * 读 可共享
      * @param key
      */
     public void get(String key) {
@@ -78,9 +76,6 @@ class MyCaChe {
  * 读 写不能共存
  * 写 写不能共存
  * 写操作 原子+独占 整个过程必须是一个完成的统一整体 中间不允许被分割 被打断
- *
- * @author veliger@163.com
- * @date 2019-04-13 0:45
  **/
 public class ReadWriteLockDemo {
     public static void main(String[] args) {
