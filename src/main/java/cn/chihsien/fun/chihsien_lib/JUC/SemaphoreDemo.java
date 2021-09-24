@@ -2,7 +2,13 @@ package cn.chihsien.fun.chihsien_lib.JUC;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
-
+/***
+ * @describe
+ *  信号量  可伸缩 可变化
+ * @return
+ * @author ChiHsien<br>
+ * @version
+ */
 public class SemaphoreDemo {
     public static void main(String[] args) {
         //模拟3个停车位

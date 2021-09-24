@@ -14,6 +14,7 @@ public class CyclicBarrierDemo {
             new Thread(()->{
                 System.out.println(Thread.currentThread().getName()+"\t 收集到第"+ temp +"颗龙珠");
                 try {
+                    //先到的被阻塞 全到了才开始
                     cyclicBarrier.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
